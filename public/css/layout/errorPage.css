@@ -12,14 +12,78 @@
 .error-image {
     width: 20rem; /* équivalent à w-80 (80 * 0.25rem) */
     max-width: 100%;
+    border-radius: 62% 38% 29% 71% / 56% 44% 73% 27%;
+    
+    /* Animation principale - morphing continu */
+    animation: morph 8s ease-in-out infinite alternate;
+    
+    /* Animation de rotation douce */
+    animation: morph 8s ease-in-out infinite alternate,
+               rotate 20s linear infinite;
+    
+    /* Transition pour les interactions */
+    transition: transform 0.3s ease;
+}
+
+/* Animation de morphing du border-radius */
+@keyframes morph {
+    0% {
+        border-radius: 62% 38% 29% 71% / 56% 44% 73% 27%;
+    }
+    25% {
+        border-radius: 45% 55% 68% 32% / 71% 29% 84% 16%;
+    }
+    50% {
+        border-radius: 89% 11% 47% 53% / 23% 77% 92% 8%;
+    }
+    75% {
+        border-radius: 58% 42% 78% 22% / 67% 33% 89% 11%;
+    }
+    100% {
+        border-radius: 73% 27% 61% 39% / 84% 17% 83% 16%;
+    }
+}
+
+/* Animation de rotation subtile */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Variante plus douce (optionnelle) */
+.error-image.gentle {
+    animation: gentleMorph 12s ease-in-out infinite alternate;
+}
+
+@keyframes gentleMorph {
+    0% {
+        border-radius: 62% 38% 29% 71% / 56% 44% 73% 27%;
+    }
+    50% {
+        border-radius: 45% 55% 48% 52% / 61% 39% 64% 36%;
+    }
+    100% {
+        border-radius: 58% 42% 38% 62% / 47% 53% 79% 21%;
+    }
 }
 
 .error-title {
-    font-size: 2.25rem; /* text-4xl ≈ 36px */
+    font-size: 5rem; /* text-4xl ≈ 36px */
     font-weight: bold;
+    margin: 0;
 }
 
 .error-message {
     font-size: 1.125rem; /* text-lg ≈ 18px */
     max-width: 48rem;    /* max-w-xl ≈ 768px */
+}
+
+@media screen and (max-width: 768px) {
+    .error-image {
+    max-width: 80%;
+}
 }

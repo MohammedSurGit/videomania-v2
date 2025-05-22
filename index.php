@@ -9,8 +9,10 @@ define("ROOT", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" 
 define("ROOT_PATH", __DIR__);
 
 use Src\Controllers\MainController;
+use Src\Controllers\AuthController;
 
 $MainController = new MainController();
+$AuthController = new AuthController();
 
 session_start();
 
@@ -26,10 +28,10 @@ try {
             $MainController->homePage();
             break;
 
-        /* case "auth":
+        case "auth":
             switch ($url[1]) {
-                case "singup":
-                    $AuthController->singupPage();
+                case "login":
+                    $AuthController->loginPage();
                     break;
 
 
@@ -37,7 +39,7 @@ try {
                 default:
                     throw new Exception("La page que vous recherchez n'existe pas ou n'est pas accessible à cette adresse...");
 
-            } */
+            }
 
 
         default:

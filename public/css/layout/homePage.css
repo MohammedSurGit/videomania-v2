@@ -1,0 +1,50 @@
+.main--home-page{
+    display: flex;
+    justify-content: center;
+}
+
+.home-heading {
+    padding-top: calc(95px + var(--spacing-32));
+    text-align: center;
+    line-height: 1.8;
+    width: 100%;
+}
+
+.home-heading h1 {
+    margin: 0;
+}
+
+.home-heading p {
+    padding: 0;
+    margin: 0;
+    color: #ca8a03;
+    margin-bottom: var(--spacing-8);
+}
+
+
+.search-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    background-color: #fce4e433;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    width: 300px;
+}
+
+.search-container img {
+    height: 28px;
+    width: auto;
+}
+
+.search-container input {
+    background-color: transparent;
+    color: white;
+    font-size: var(--font-size-lg);
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: none;
+}

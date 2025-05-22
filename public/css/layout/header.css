@@ -15,8 +15,11 @@ header {
 
 @media screen and (max-width: 768px) {
     header {
-        align-items: space-between;
         padding: var(--spacing-2) var(--spacing-6);
+    }
+
+      .header-black {
+        background: var(--black) !important;
     }
 }
 
@@ -61,7 +64,7 @@ header {
     padding-left: var(--spacing-16);
 }
 
-.nav-container ul li a{
+.nav-container ul li a {
     opacity: 0.5;
 }
 
@@ -76,33 +79,6 @@ header {
 .right-content {
     display: flex;
     gap: var(--spacing-2);
-}
-
-.search-container {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    background-color: #fce4e433;
-    padding: var(--spacing-4);
-    border-radius: var(--radius-lg);
-}
-
-.search-container img {
-    height: 28px;
-    width: auto;
-}
-
-.search-container input {
-    background-color: transparent;
-    color: white;
-    font-size: var(--font-size-lg);
-    width: 120px;
-}
-
-.search-container input:focus {
-    outline: none;
-    box-shadow: none;
 }
 
 .not-on-desktop {
@@ -155,6 +131,7 @@ header {
     right: 200px;
     border-radius: var(--radius-lg);
     z-index: var(--z-10);
+    background: var(--black);
 }
 
 .account-modal img {
@@ -186,23 +163,25 @@ header {
     opacity: 1;
 }
 
-.account-modal  ul {
+.account-modal ul {
     padding: var(--spacing-6);
 }
 
 
 @media screen and (max-width: 768px) {
     .account-modal {
-    position: absolute;
-    /* border-width: 1px; */
-    width: 100%;
-    height: calc(100dvh - 95px);
-    top: 95px;
-    right: 0px;
-    left: 0px;
-    border-radius: var(--radius-lg);
-    z-index: var(--z-10);
-}
+        position: absolute;
+        /* border-width: 1px; */
+        width: 100%;
+        height: 100dvh;
+        top: 88px;
+        right: 0px;
+        left: 0px;
+        border-radius: var(--radius-lg);
+        z-index: var(--z-10);
+        background-color: var(--black);
+    }
+
 }
 
 
@@ -220,11 +199,12 @@ header {
     border-radius: var(--radius-lg);
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-normal);
+    background-color: var(--white);
+    color: var(--text-primary);
 }
 
 @media screen and (max-width: 768px) {
-    .login-button  {
+    .login-button {
         display: none;
     }
 }
-

@@ -1,0 +1,19 @@
+.main--auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100dvh;
+}
+
+.auth-aside {
+    max-height: 100%;
+    overflow: hidden;
+    padding: var(--spacing-4);
+     border-radius: var(--radius-lg);
+}
+
+.auth-aside img{
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}

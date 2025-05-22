@@ -1,29 +1,22 @@
 <header>
-    <div class="logo-container">
+    <a href="<?= ROOT ?>" class="logo-container">
         <img src="<?= ROOT . 'public/assets/imgs/videomania-logo.png' ?>" alt="">
-    </div>
+    </a>
     <nav class="nav-container">
         <ul>
             <li>
-                <a id="home" href="home">Acceuil</a>
-            </li>
-            <span>|</span>
-            <li>
                 <a id="explore" href="explore">Explorer</a>
             </li>
-            <span>|</span>
+            
             <li>
                 <a id="post" href="post">Poster</a>
             </li>
         </ul>
     </nav>
     <div class="right-content">
-        <!-- <div class="search-container">
-            <img src="<?= ROOT . 'public/assets/icons/search.svg' ?>" alt="" class="search__icon">
-            <input type="text" class="search-bar" name="search" id="search" placeholder="Rechercher">
-        </div> -->
         <button class="show-account-modal">
-            <img src="<?= ROOT . 'public/assets/icons/burger-menu.svg' ?>" alt="" class="search__icon">
+            <img src="<?= ROOT . 'public/assets/icons/burger-menu.svg' ?>" alt="burger menu icon" class="search__icon" id="open-account-modal-icon">
+            <img src="<?= ROOT . 'public/assets/icons/cross.svg' ?>" alt="cross icon" class="search__icon" id="close-account-modal-icon">
         </button>
         <div class="account-modal">
                 <nav>
@@ -43,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="settings">
                                 <img src="<?= ROOT . 'public/assets/icons/setting.svg' ?>" alt=""
                                     class="search__icon">
                                 Paramètres
@@ -53,12 +46,12 @@
                 </nav>
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="about-us">
                             <img src="<?= ROOT . 'public/assets/icons/help.svg' ?>" alt="" class="search__icon">
                             À propos de nous
                         </a>
                         <li>
-                            <a href="">
+                            <a href="auth/login">
                                 <img src="<?= ROOT . 'public/assets/icons/login.svg' ?>" alt=""
                                     class="search__icon">
                                 Connexion
@@ -67,8 +60,8 @@
                     </li>
                 </ul>
             </div>
-        <button class="login-button">
+        <a href="auth/login" class="login-button">
             Connexion
-        </button>
+        </a>
     </div>
 </header>

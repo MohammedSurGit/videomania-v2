@@ -3,9 +3,12 @@
 
 /* components */
 @import url("layout/header.css");
+@import url("layout/footer.css");
 
 /* app pages */
 @import url("layout/errorPage.css");
+@import url("layout/homePage.css");
+@import url("layout/auth.css");
 
 *,
 ::before,
@@ -24,8 +27,12 @@ body {
     letter-spacing: var(--letter-spacing-normal);
     margin: 0;
     position: relative;
-    height: 100vh;
-    overflow-x: hidden;
+    color: var(--text-inverse)
+}
+
+.compressed-body {
+    height: auto;
+    overflow: auto;
 }
 
 a {
@@ -37,4 +44,15 @@ ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
+}
+
+main {
+    min-height: 100dvh;
+}
+
+@media screen and (max-width: 768px) {
+    .compressed-body {
+        height: 100dvh;
+        overflow: hidden;
+    }
 }
