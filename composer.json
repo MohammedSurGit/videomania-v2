@@ -1,0 +1,15 @@
+{
+    "name": "ecom/videomania",
+    "autoload": {
+        "psr-4": {
+            "Ecom\\Videomania\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MohammedSurGit",
+            "email": "mohalementeur@gmail.com"
+        }
+    ],
+    "require": {}
+}
