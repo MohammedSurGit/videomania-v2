@@ -1,0 +1,25 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 1.5rem; /* équivalent à space-y-6 */
+    text-align: center;
+}
+
+.error-image {
+    width: 20rem; /* équivalent à w-80 (80 * 0.25rem) */
+    max-width: 100%;
+}
+
+.error-title {
+    font-size: 2.25rem; /* text-4xl ≈ 36px */
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 1.125rem; /* text-lg ≈ 18px */
+    max-width: 48rem;    /* max-w-xl ≈ 768px */
+}

@@ -2,7 +2,7 @@
     "name": "ecom/videomania",
     "autoload": {
         "psr-4": {
-            "Ecom\\Videomania\\": "src/"
+            "Src\\": "src/"
         }
     },
     "authors": [
