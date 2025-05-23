@@ -2,6 +2,7 @@ const UIManager = {
   init() {
     this.showAccountModal();
     this.highlightNavLink();
+    this.showPassword();
   },
 
   showAccountModal() {
@@ -30,7 +31,7 @@ const UIManager = {
       header.classList.toggle("header-black");
       accountModal.style.display = isOpen ? "block" : "none";
       modalIcons[0].style.display = isOpen ? "none" : "block";
-      modalIcons[1].style.display = isOpen ? "block" : "none" ;
+      modalIcons[1].style.display = isOpen ? "block" : "none";
     });
 
     document.addEventListener("click", function (e) {
@@ -43,7 +44,7 @@ const UIManager = {
         header.classList.remove("header-black");
         accountModal.style.display = "none";
         modalIcons[0].style.display = "block";
-        modalIcons[1].style.display = "none" ;
+        modalIcons[1].style.display = "none";
       }
     });
   },
@@ -64,6 +65,32 @@ const UIManager = {
     if (url.includes("explore"))
       exploreLink.classList.add("highlitght-nav-link");
     if (url.includes("post")) postLink.classList.add("highlitght-nav-link");
+  },
+
+  showPassword() {
+    const passwordContainers = document.querySelectorAll(".password-container");
+
+    console.log(passwordContainers);
+
+    passwordContainers.forEach((e) => {
+      const passwordInput = e.querySelector("input");
+      const openedEyeIcon = e.querySelector('img[src*="opened-eye.svg"]');
+      const closedEyeIcon = e.querySelector('img[src*="closed-eye.svg"]');
+
+      closedEyeIcon.style.display = "none";
+
+      openedEyeIcon.addEventListener("click", () => {
+        closedEyeIcon.style.display = "block";
+        openedEyeIcon.style.display = "none";
+        passwordInput.type = "text";
+      });
+
+      closedEyeIcon.addEventListener("click", () => {
+        closedEyeIcon.style.display = "none";
+        openedEyeIcon.style.display = "block";
+        passwordInput.type = "password";
+      });
+    });
   },
 };
 

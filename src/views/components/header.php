@@ -5,11 +5,11 @@
     <nav class="nav-container">
         <ul>
             <li>
-                <a id="explore" href="explore">Explorer</a>
+                <a id="explore" href="<?= ROOT . 'explore' ?>">Explorer</a>
             </li>
             
             <li>
-                <a id="post" href="post">Poster</a>
+                <a id="post" href="<?= ROOT . 'post' ?>">Poster</a>
             </li>
         </ul>
     </nav>
@@ -22,21 +22,21 @@
                 <nav>
                     <ul>
                         <li class="not-on-desktop ">
-                            <a href="explore">
+                            <a href="<?= ROOT . 'explore' ?>">
                                 <img src="<?= ROOT . 'public/assets/icons/compass.svg' ?>" alt=""
                                     class="search__icon">
                                 Explorer
                             </a>
                         </li>
                         <li class="not-on-desktop ">
-                            <a href="post">
+                            <a href="<?= ROOT . 'post' ?>">
                                 <img src="<?= ROOT . 'public/assets/icons/send.svg' ?>" alt=""
                                     class="search__icon">
                                 Poster
                             </a>
                         </li>
                         <li>
-                            <a href="settings">
+                            <a href="<?= ROOT . 'settings' ?>">
                                 <img src="<?= ROOT . 'public/assets/icons/setting.svg' ?>" alt=""
                                     class="search__icon">
                                 Paramètres
@@ -46,12 +46,12 @@
                 </nav>
                 <ul>
                     <li>
-                        <a href="about-us">
+                        <a href="<?= ROOT . 'about-us' ?>">
                             <img src="<?= ROOT . 'public/assets/icons/help.svg' ?>" alt="" class="search__icon">
                             À propos de nous
                         </a>
                         <li>
-                            <a href="auth/login">
+                            <a href="<?= ROOT . 'auth/login' ?>">
                                 <img src="<?= ROOT . 'public/assets/icons/login.svg' ?>" alt=""
                                     class="search__icon">
                                 Connexion

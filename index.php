@@ -34,6 +34,10 @@ try {
                     $AuthController->loginPage();
                     break;
 
+                case "signup":
+                    $AuthController->signupPage();
+                    break;
+
 
 
                 default:

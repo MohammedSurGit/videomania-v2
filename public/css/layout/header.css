@@ -1,9 +1,13 @@
 header {
-    position: absolute;
+    position: sticky;
     left: 0px;
     right: 0px;
     top: 0px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0) 100%);
     height: fit-content;
     padding: var(--spacing-8) var(--spacing-16) 0 var(--spacing-16);
     display: flex;
