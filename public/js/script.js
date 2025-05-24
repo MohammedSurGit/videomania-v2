@@ -3,6 +3,9 @@ const UIManager = {
     this.showAccountModal();
     this.highlightNavLink();
     this.showPassword();
+    this.changeHeaderColorOnScroll();
+    /* this.highlightSearchInputOnClick(); */
+    this.swipperInit();
   },
 
   showAccountModal() {
@@ -58,8 +61,6 @@ const UIManager = {
     const exploreLink = headerNav.querySelector("#explore");
     const postLink = headerNav.querySelector("#post");
 
-    console.log(exploreLink, postLink);
-
     const url = window.location.href;
 
     if (url.includes("explore"))
@@ -69,8 +70,6 @@ const UIManager = {
 
   showPassword() {
     const passwordContainers = document.querySelectorAll(".password-container");
-
-    console.log(passwordContainers);
 
     passwordContainers.forEach((e) => {
       const passwordInput = e.querySelector("input");
@@ -90,6 +89,94 @@ const UIManager = {
         openedEyeIcon.style.display = "block";
         passwordInput.type = "password";
       });
+    });
+  },
+
+  changeHeaderColorOnScroll() {
+    const header = document.querySelector("header");
+    if (!header) {
+      return;
+    }
+
+    const homeHeading = document.querySelector(".home-heading");
+
+    if (homeHeading) {
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const triggerPoint = window.innerHeight * 0.4;
+
+        if (scrollPosition > triggerPoint) {
+          header.style.backgroundColor = "var(--primary-a-color)";
+        } else {
+          header.style.backgroundColor = "transparent";
+        }
+      });
+    } else {
+      header.style.backgroundColor = "var(--primary-a-color)";
+    }
+  },
+
+  /* highlightSearchInputOnClick() {
+    const searchInputContainer = document.querySelector('.search-container div');
+    if (!searchInputContainer) {return}
+
+    const searchInput = searchInputContainer.querySelector('input');
+    const searchIcon = searchInputContainer.querySelector('img');
+
+
+    searchInput.addEventListener('click', () => {
+      searchInputContainer.style.border = "solid 1px var(--white)";
+      searchIcon.style.opacity = '1';
+    });
+
+
+
+    document.addEventListener("click", function (e) {
+      if (
+        !searchInputContainer.contains(e.target)
+      ) {
+        searchInputContainer.style.border = "solid 1px transparent";
+        searchIcon.style.opacity = '0.5';
+      }
+    });
+
+
+
+
+
+  } */
+
+  swipperInit() {
+    const authAside = document.querySelector(".auth-aside");
+    if (!authAside) {
+      return;
+    }
+
+    const swiper = new Swiper(".swiper", {
+      /* autoplay */
+      autoplay: {
+        delay: 4000,
+      },
+
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      /* navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }, */
+
+      // And if we need scrollbar
+      /* scrollbar: {
+        el: ".swiper-scrollbar",
+      }, */
     });
   },
 };

@@ -1,7 +1,9 @@
 .main--auth {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100dvh;
+    /* background-color: var(--primary-a-color); */
+    color: var(--black);
+    min-height: 100dvh;
 }
 
 .auth-aside {
@@ -10,6 +12,7 @@
     padding: var(--spacing-4);
     border-radius: var(--radius-lg);
     position: relative;
+    color: var(--white)
 }
 
 @media screen and (max-width: 768px) {
@@ -24,19 +27,33 @@
 
 
 /* background image */
-.auth-aside img {
+.swiper {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    z-index: -1;
+}
+
+
+.swiper-slide img {
     height: 100%;
     width: 100%;
     border-radius: inherit;
     object-fit: cover;
 }
 
+.swiper-pagination {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--spacing-6);
+}
 
 /* videomania logo */
 .auth-logo__container {
     position: absolute;
     top: var(--spacing-8);
     left: var(--spacing-8);
+    z-index: var(--z-10);
 }
 
 .auth-logo__container img {
@@ -56,6 +73,7 @@
     position: absolute;
     top: var(--spacing-8);
     right: var(--spacing-8);
+    z-index: var(--z-10);
 }
 
 .back-to-app__link {
@@ -66,6 +84,13 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-2);
+    transition: all 0.2s ease;
+}
+
+.back-to-app__link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    gap: var(--spacing-3);
+    transition: all 0.2s ease;
 }
 
 .back-to-app__link-icon {
@@ -89,17 +114,25 @@
     left: 0;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     line-height: 1.4;
     font-size: var(--font-size-3xl);
-    padding: var(--spacing-8);
+    margin: var(--spacing-4);
+    border-radius: var(--radius-lg);
     background: linear-gradient(to top,
             rgba(0, 0, 0, 0.5) 0%,
             rgba(0, 0, 0, 0.3) 40%,
             rgba(0, 0, 0, 0.2) 70%,
             rgba(0, 0, 0, 0) 100%);
+    z-index: var(--z-10);
+}
+
+.commitment-text__text {
+    padding: var(--spacing-12) var(--spacing-6);
+    font-weight: var(--font-weight-semibold);
+    text-align: left;
 }
 
 .auth-container {
@@ -116,7 +149,7 @@
 }
 
 .auth__content a {
-    color: var(--secondary-a-color);
+    color: var(--tertiary-a-color);
 }
 
 .auth__content h1 {
@@ -129,7 +162,7 @@
 }
 
 .auth-form+a {
-    color: var(--secondary-a-color);
+    color: var(--tertiary-a-color);
     display: block;
     text-align: center;
     padding-top: var(--spacing-4);
@@ -150,9 +183,20 @@
     margin-bottom: var(--spacing-6);
     border-radius: var(--radius-lg);
     padding: var(--spacing-2);
-    background-color: #fce4e433;
+    /* background-color: #fce4e433; */
     color: var(--white);
+    border-width: 1px;
 }
+
+
+/* .auth-container form input:focus {
+    outline: 2px solid var(--white) !important;
+    outline-offset: 2px; 
+} */
+
+
+
+
 
 .password-container {
     display: flex;
@@ -177,14 +221,14 @@
     opacity: 0.5;
 }
 
-#submit-btn {
+/* #submit-btn {
     font-size: var(--font-size-m);
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-a-color);
     color: var(--white);
-}
+} */
 
 
 .name-container {

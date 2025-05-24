@@ -9,12 +9,13 @@ header {
             rgba(0, 0, 0, 0.2) 30%,
             rgba(0, 0, 0, 0) 100%);
     height: fit-content;
-    padding: var(--spacing-8) var(--spacing-16) 0 var(--spacing-16);
+    padding: 0 var(--spacing-16);
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: var(--z-10);
-    height: 90px;
+    height: 75px;
+    /* background-color: var(--black); */
 }
 
 @media screen and (max-width: 768px) {
@@ -23,7 +24,7 @@ header {
     }
 
       .header-black {
-        background: var(--black) !important;
+        background: var(--primary-a-color) !important;
     }
 }
 
@@ -131,11 +132,11 @@ header {
     /* border-width: 1px; */
     width: 250px;
     height: fit-content;
-    top: 95px;
-    right: 200px;
+    top: 80px;
+    right: 190px;
     border-radius: var(--radius-lg);
     z-index: var(--z-10);
-    background: var(--black);
+    background: var(--primary-a-color);
 }
 
 .account-modal img {
@@ -178,12 +179,12 @@ header {
         /* border-width: 1px; */
         width: 100%;
         height: 100dvh;
-        top: 88px;
+        top: 70px;
         right: 0px;
         left: 0px;
         border-radius: var(--radius-lg);
         z-index: var(--z-10);
-        background-color: var(--black);
+        background-color: var(--primary-a-color);
     }
 
 }
@@ -197,15 +198,6 @@ header {
 
 
 /* login button */
-
-.login-button {
-    padding: var(--spacing-2) var(--spacing-4);
-    border-radius: var(--radius-lg);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-normal);
-    background-color: var(--white);
-    color: var(--text-primary);
-}
 
 @media screen and (max-width: 768px) {
     .login-button {

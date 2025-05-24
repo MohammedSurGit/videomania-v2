@@ -21,7 +21,7 @@
 }
 
 body {
-    background: var(--black);
+    background: var( --primary-a-color);
     color: var(--text-primary);
     font-weight: var(--font-weight-light);
     letter-spacing: var(--letter-spacing-normal);
@@ -30,9 +30,28 @@ body {
     color: var(--text-inverse)
 }
 
+main {
+    background-color: var(--white);
+    color: var(--black);
+}
+
 .compressed-body {
     height: auto;
     overflow: auto;
+}
+
+button, .button {
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    background-color: var(--white);
+    color: var(--text-primary);
+}
+
+.primary-button {
+    background-color: var(--tertiary-a-color) !important;
+    color: var(--white)
 }
 
 a {
@@ -44,10 +63,6 @@ ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
-}
-
-main {
-    min-height: 100dvh;
 }
 
 @media screen and (max-width: 768px) {

@@ -4,6 +4,9 @@
     </a>
     <nav class="nav-container">
         <ul>
+<!--             <li>
+                <a id="explore" href="<?= ROOT ?>">Acceuil</a>
+            </li> -->
             <li>
                 <a id="explore" href="<?= ROOT . 'explore' ?>">Explorer</a>
             </li>
@@ -60,7 +63,7 @@
                     </li>
                 </ul>
             </div>
-        <a href="auth/login" class="login-button">
+        <a href="auth/login" class="login-button button primary-button">
             Connexion
         </a>
     </div>

@@ -3,9 +3,14 @@
   /* Primary Colors */
   /* ======================================== */
 
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bullet-inactive-color: #999;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+
   /* accent Colors */
-  --primary-a-color: #52f48f;
+  --primary-a-color: #01162c;
   --secondary-a-color: #208cc8;
+  --tertiary-a-color: #db0940;
 
   /* State Colors */
   --success-color: #27ae60;
@@ -105,6 +110,7 @@
   --spacing-20: 5rem; /* 80px */
   --spacing-24: 6rem; /* 96px */
   --spacing-32: 8rem; /* 128px */
+  --spacing-36: 10rem; /* 128px */
 
   /* ======================================== */
   /* Border */

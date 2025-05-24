@@ -1,6 +1,7 @@
 .main--home-page{
     display: flex;
     justify-content: center;
+    margin-top: -75px;
 }
 
 .home-heading {
@@ -8,12 +9,17 @@
     text-align: center;
     line-height: 1.8;
     width: 100%;
-    background-image: url('../../assets/imgs/ski.jpg');
+    background-image: url('../../assets/imgs/cross.jpg');
     background-size: cover;         
     background-position: center;    
     background-repeat: no-repeat;   
     background-attachment: scroll;
-    margin-top: -90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    height: 100dvh;
+    color: white
 }
 
 .home-heading::before {
@@ -22,11 +28,21 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5); /* noir à 50% */
   z-index: 1;
+  max-height: 100dvh;
+  height: 100%;
 }
 
 .home-heading > * {
   position: relative;
   z-index: 2; 
+}
+
+.home-heading__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--spacing-12) var(--spacing-16);
 }
 
 .home-heading h1 {
@@ -46,7 +62,7 @@
 .search-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .search-container div {
@@ -54,7 +70,7 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-2);
-    background-color: #ffffff33;
+    background-color: var(--primary-a-color);
     padding: var(--spacing-4);
     width: 50%;
     border-radius: var(--radius-lg);
@@ -63,19 +79,61 @@
 .search-container img {
     height: 28px;
     width: auto;
+    opacity: 0.5;
 }
 
 .search-container input {
     background-color: transparent;
     color: white;
     font-size: var(--font-size-lg);
+    width: 100%;
 }
 
 .search-container input::placeholder {
     color: white;
+    opacity: 0.5;
 }
 
 .search-container input:focus {
     outline: none;
     box-shadow: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-heading {
+        padding: 75px 0;
+        align-items: center;
+        justify-content: center;
+        height: 70dvh;
+    }
+
+    .home-heading::before {
+        max-height: 70dvh;
+    }
+
+    .home-heading__content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-container {
+        justify-content: center;
+    }
+
+    .search-container div {
+        width: 100%;
+    }
+
+    .home-heading h1 {
+        font-size: var(--font-size-3xl);
+        line-height: 1.2;
+        margin-bottom: var(--spacing-6);
+    }
+
+    .home-heading p {
+        display: none;
+    }
+
+
 }
